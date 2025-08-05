@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustafa Coşgun - Frontend & Backend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-icon">
+                        <span>MC</span>
+                    </div>
+                    <span class="logo-text">Mustafa Coşgun</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#hero" class="nav-link">Ana Sayfa</a>
+                    <a href="#about" class="nav-link">Hakkımda</a>
+                    <a href="#projects" class="nav-link">Çalışmalar</a>
+                    <a href="#contact" class="nav-link">İletişim</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile" id="mobileNav">
+                <a href="#hero" class="nav-link-mobile">Ana Sayfa</a>
+                <a href="#about" class="nav-link-mobile">Hakkımda</a>
+                <a href="#projects" class="nav-link-mobile">Çalışmalar</a>
+                <a href="#contact" class="nav-link-mobile">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-avatar">
+                    <div class="avatar-gradient">
+                        <div class="avatar-inner">
+                            <span>MC</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <h1 class="hero-title">
+                    Ben Mustafa
+                    <span class="hero-title-gradient">Coşgun</span>
+                </h1>
+                
+                <p class="hero-description">
+                    <span class="text-purple">Frontend</span> & <span class="text-pink">Backend</span> geliştiricisi, 
+                    tasarım ve teknoloji tutkunu. Modern web çözümleri ile hayallerinizi gerçeğe dönüştürüyorum.
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('projects')">
+                        Çalışmalarımı İncele
+                    </button>
+                    <button class="btn btn-outline" onclick="scrollToSection('contact')">
+                        İletişime Geç
+                    </button>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator" onclick="scrollToSection('about')">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Hakkımda</h2>
+                    <p>
+                        Teknoloji ve tasarım alanında 5+ yıllık deneyime sahip bir yazılım geliştiricisiyim. 
+                        Frontend'den backend'e, tasarımdan deployment'a kadar tüm süreçlerde aktif rol alıyorum.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon service-icon-purple">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16,18 22,12 16,6"></polyline>
+                                <polyline points="8,6 2,12 8,18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Frontend Geliştirme</h3>
+                        <p>Modern React, Next.js ve TypeScript ile responsive web uygulamaları</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon service-icon-pink">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>Backend Geliştirme</h3>
+                        <p>Node.js, Python ile güçlü API'ler ve veritabanı çözümleri</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon service-icon-blue">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m2 3 20 9L2 21l5-9"></path>
+                            </svg>
+                        </div>
+                        <h3>UI/UX Tasarım</h3>
+                        <p>Kullanıcı deneyimi odaklı, modern ve etkileyici arayüz tasarımları</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon service-icon-green">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m10 4 4 6-4 6"></path>
+                            </svg>
+                        </div>
+                        <h3>Responsive Tasarım</h3>
+                        <p>Tüm cihazlarda mükemmel görüntü sunan uyumlu web siteleri</p>
+                    </div>
+                </div>
+
+                <div class="skills-section">
+                    <h3>Teknolojiler & Araçlar</h3>
+                    <div class="skills-grid">
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">Next.js</span>
+                        <span class="skill-badge">TypeScript</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">MongoDB</span>
+                        <span class="skill-badge">Figma</span>
+                        <span class="skill-badge">Adobe XD</span>
+                        <span class="skill-badge">Tailwind CSS</span>
+                        <span class="skill-badge">SASS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Çalışmalarım</h2>
+                    <p>
+                        Farklı teknolojiler kullanarak geliştirdiğim projeler. Her biri farklı zorluklarla 
+                        karşılaştığım ve yeni şeyler öğrendiğim deneyimler.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop" alt="E-Commerce Platform">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-Commerce Platform</h3>
+                            <p>Modern, responsive e-ticaret platformu. React, Node.js ve PostgreSQL kullanılarak geliştirildi.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">Stripe</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="btn btn-sm btn-outline">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    GitHub
+                                </button>
+                                <button class="btn btn-sm btn-primary">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="m7 7 10 10-5 5-5-5Z"></path>
+                                        <path d="m15 7 3 3-10 10-3-3Z"></path>
+                                    </svg>
+                                    Canlı Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop" alt="Task Management App">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Task Management App</h3>
+                            <p>Takım çalışması için geliştirilmiş görev yönetim uygulaması. Real-time güncellemeler.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Next.js</span>
+                                <span class="tech-badge">TypeScript</span>
+                                <span class="tech-badge">MongoDB</span>
+                                <span class="tech-badge">Socket.io</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="btn btn-sm btn-outline">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    GitHub
+                                </button>
+                                <button class="btn btn-sm btn-primary">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="m7 7 10 10-5 5-5-5Z"></path>
+                                        <path d="m15 7 3 3-10 10-3-3Z"></path>
+                                    </svg>
+                                    Canlı Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop" alt="Portfolio Website">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Portfolio Website</h3>
+                            <p>Kişisel portföy websitesi tasarımı ve geliştirilmesi. Modern animasyonlar ve responsive tasarım.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Framer Motion</span>
+                                <span class="tech-badge">Tailwind CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="btn btn-sm btn-outline">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    GitHub
+                                </button>
+                                <button class="btn btn-sm btn-primary">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="m7 7 10 10-5 5-5-5Z"></path>
+                                        <path d="m15 7 3 3-10 10-3-3Z"></path>
+                                    </svg>
+                                    Canlı Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop" alt="Weather Dashboard">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Weather Dashboard</h3>
+                            <p>Hava durumu verileri ve grafiklerle görselleştirme dashboard'u. API entegrasyonu.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Vue.js</span>
+                                <span class="tech-badge">Chart.js</span>
+                                <span class="tech-badge">OpenWeather API</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="btn btn-sm btn-outline">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    GitHub
+                                </button>
+                                <button class="btn btn-sm btn-primary">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="m7 7 10 10-5 5-5-5Z"></path>
+                                        <path d="m15 7 3 3-10 10-3-3Z"></path>
+                                    </svg>
+                                    Canlı Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=800&h=600&fit=crop" alt="Social Media Analytics">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Social Media Analytics</h3>
+                            <p>Sosyal medya metriklerini analiz eden dashboard. Veri görselleştirme ve raporlama.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Angular</span>
+                                <span class="tech-badge">D3.js</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">FastAPI</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="btn btn-sm btn-outline">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    GitHub
+                                </button>
+                                <button class="btn btn-sm btn-primary">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="m7 7 10 10-5 5-5-5Z"></path>
+                                        <path d="m15 7 3 3-10 10-3-3Z"></path>
+                                    </svg>
+                                    Canlı Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop" alt="Restaurant Booking System">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Restaurant Booking System</h3>
+                            <p>Restoran rezervasyon sistemi. Online rezervasyon ve masa yönetimi özellikleri.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Express.js</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">JWT</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="btn btn-sm btn-outline">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    GitHub
+                                </button>
+                                <button class="btn btn-sm btn-primary">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="m7 7 10 10-5 5-5-5Z"></path>
+                                        <path d="m15 7 3 3-10 10-3-3Z"></path>
+                                    </svg>
+                                    Canlı Demo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>İletişime Geç</h2>
+                    <p>
+                        Yeni bir proje için işbirliği yapmak mı istiyorsunuz? Ya da sadece merhaba demek? 
+                        Benimle iletişime geçmek için aşağıdaki formu kullanabilir ya da doğrudan ulaşabilirsiniz.
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3>İletişim Bilgileri</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">E-posta</p>
+                                <a href="mailto:mustafa.cosgun@email.com" class="contact-value">mustafa.cosgun@email.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">Telefon</p>
+                                <a href="tel:+905551234567" class="contact-value">+90 555 123 45 67</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="contact-label">Konum</p>
+                                <span class="contact-value">İstanbul, Türkiye</span>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <h4>Sosyal Medya</h4>
+                            <div class="social-icons">
+                                <a href="https://github.com" target="_blank" class="social-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                </a>
+                                <a href="https://linkedin.com" target="_blank" class="social-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </a>
+                                <a href="https://twitter.com" target="_blank" class="social-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <div class="contact-form-card">
+                            <h3>Mesaj Gönder</h3>
+                            
+                            <form class="contact-form" id="contactForm">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" placeholder="Adınız" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" placeholder="E-posta adresiniz" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın..." rows="5" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-full">
+                                    Mesajı Gönder
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <span>MC</span>
+                    </div>
+                </div>
+                
+                <h3>Mustafa Coşgun</h3>
+                <p class="footer-subtitle">Frontend & Backend Developer • UI/UX Designer</p>
+                
+                <div class="footer-social">
+                    <a href="https://github.com" target="_blank" class="footer-social-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="footer-social-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="footer-social-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>© 2024 Mustafa Coşgun. Tüm hakları saklıdır. ❤️ ile kodlandı.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
